@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Advanced Online Compiler</title>
+
+    <!-- CodeMirror CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/dracula.min.css"
+    />
+
+    <!-- Split.js for Resizable Panes -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/split.js/1.6.0/split.min.js"></script>
+
+    <!-- html2canvas for Screenshot -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+   <div class="toolbar">
+  <button onclick="runCode()">▶ Run</button>
+  <button onclick="toggleLayout()">🔁 Toggle Layout</button>
+  <button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+  <button onclick="captureScreenshot()">📸 Screenshot</button>
+  <button onclick="openInNewTab()">🌐 Open in New Tab</button>
+</div>
+
+
+    <div id="container" class="vertical">
+      <div class="split" id="editor-pane">
+        <div class="tabs">
+          <button onclick="switchTab('html')">HTML</button>
+          <button onclick="switchTab('css')">CSS</button>
+          <button onclick="switchTab('js')">JS</button>
+        </div>
+
+        <div class="code-area">
+          <div id="tab-html" class="tab-content">
+            <textarea id="htmlCode">
+<div class="card">
+  <h1>Welcome to My Page</h1>
+  <p>This is a sample description inside a styled card.</p>
+  <button onclick="showAlert()">Click Me</button>
+</div>
+  </textarea
+            >
+          </div>
+
+          <div id="tab-css" class="tab-content hidden">
+            <textarea id="cssCode">
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 50px;
+}
+
+.card {
+  background-color: white;
+  padding: 30px;
+  margin: auto;
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #04AA6D;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+    </textarea
+            >
+          </div>
+
+          <div id="tab-js" class="tab-content hidden">
+            <textarea id="jsCode">
+function showAlert() {
+  alert("Button clicked!");
+  console.log("Button was clicked!");
+}
+    </textarea
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="split" id="output-pane">
+        <iframe id="output"></iframe>
+      </div>
+    </div>
+
+    <!-- CodeMirror JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/htmlmixed/htmlmixed.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/hint/show-hint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/hint/html-hint.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/hint/show-hint.min.css"
+    />
+
+    <script src="script.js"></script>
+  </body>
+</html>

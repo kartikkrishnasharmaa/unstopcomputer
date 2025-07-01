@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f4f4f4;
+}
+
+body.dark {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  background: #222;
+}
+
+.toolbar button {
+  padding: 10px 15px;
+  background: #04AA6D;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+#container {
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: row;
+}
+
+#container.horizontal {
+  flex-direction: column;
+}
+
+.split {
+  overflow: auto;
+}
+
+#editor-pane, #output-pane {
+  flex: 1;
+  padding: 0;
+}
+
+.tabs {
+  display: flex;
+  background: #ccc;
+}
+
+.tabs button {
+  flex: 1;
+  padding: 10px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 15px;
+  transition: background 0.2s ease;
+}
+
+.tabs button:nth-child(1) {
+  background-color: #1e1e1e; /* HTML - orange */
+}
+
+.tabs button:nth-child(2) {
+  background-color: #1e1e1e; /* CSS - blue */
+}
+
+.tabs button:nth-child(3) {
+  background-color: #1e1e1e; /* JS - yellow */
+}
+
+
+.tabs button:hover {
+  background: #ddd;
+}
+
+
+.tabs button.active-tab {
+  box-shadow: inset 0 -4px 0 0 white;
+  opacity: 1;
+}
+
+.code-area {
+  height: 100%;
+}
+
+.tab-content {
+  height: 100%;
+}
+
+.tab-content.hidden {
+  display: none;
+}
+
+.CodeMirror {
+  height: calc(100vh - 160px);
+  font-size: 14px;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: white;
+}
+
+body.dark iframe {
+  background: #333;
+}

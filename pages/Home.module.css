@@ -1,0 +1,17 @@
+/* Home.module.css me */
+.tiltWrapper {
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  padding: 1rem;
+  margin: 1rem 0;
+  width: 100%;
+  max-width: 1200px;
+  color: rgb(52, 117, 171);
+  transition: transform 0.1s ease-out;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
