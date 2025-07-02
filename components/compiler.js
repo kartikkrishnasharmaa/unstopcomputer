@@ -4,7 +4,7 @@ import Link from "next/link";
 import Head from "next/head";
 import { motion } from "framer-motion";
 
-// Animation variants
+// Animation variants of compiler
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
